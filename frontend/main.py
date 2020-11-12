@@ -13,10 +13,10 @@ def home():
 @app.route('/demo', methods=['POST', 'GET'])
 def demo():
     if request.method == 'POST':
-        submit_value = request.form['subb']
+        submit_value = request.form['button_submit']
         # print(submit_value)
         if submit_value == 'submit':
-            text_value = request.form['txt']
+            text_value = request.form['check_sentiment']
             # return 'HI'
             return render_template('demo.html', text=text_value)
         else:
