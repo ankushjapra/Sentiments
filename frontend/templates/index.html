@@ -1,10 +1,22 @@
 {% extends 'base.html' %}
 {% block title%}Home Page{% endblock %}
 {% block content %}
-<form class="" action="demo" method="post">
-    <h1>Please enter text below to find sentiment</h1>
-    <p><input type="text" name="txt"></p>
-    <p><input type="submit" name="subb" value="submit"></p>
-</form>
-
+<div class="container bg mw-100" >
+    <div class="row">
+        <div class="col-3 row-12">
+        </div>
+        <div class="col-6 mh-100 ">
+            <!-- <img src="../static/stylesheets/sad.png" class="sentiment_image" alt=""> -->
+            <form class="form-container" action="demo" method="post">
+                <div class="form-group">
+                    <label for="check_sentiment">Please enter text below to predict sentiment of it!!</label>
+                    <input  type="text" class="form-control" placeholder="write happy or sad " id="check_sentiment" name="check_sentiment">
+                </div>
+                <button type="submit" name="button_submit" class="btn btn-success btn-block" value="submit"> Find Sentiment </button>
+            </form>
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+</div>
 {% endblock %}
