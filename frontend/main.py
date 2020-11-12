@@ -10,15 +10,15 @@ def home():
 # @app.route('/login', methods=['POST', 'GET'])
 # def login():
 
-@app.route('/demo', methods=['POST', 'GET'])
-def demo():
+@app.route('/sentiment', methods=['POST', 'GET'])
+def sentiment():
     if request.method == 'POST':
         submit_value = request.form['button_submit']
         # print(submit_value)
         if submit_value == 'submit':
             text_value = request.form['check_sentiment']
             # return 'HI'
-            return render_template('demo.html', text=text_value)
+            return render_template('sentiment.html', text=text_value)
         else:
             return redirect('/')
     else:
